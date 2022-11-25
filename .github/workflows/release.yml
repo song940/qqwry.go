@@ -1,6 +1,3 @@
-# This workflow will build a golang project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
-
 name: Go
 
 on:
@@ -15,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Go
+    - name: Set up Golang
       uses: actions/setup-go@v3
       with:
         go-version: 1.19.1
@@ -24,9 +21,9 @@ jobs:
     - name: Upload Release
       uses: softprops/action-gh-release@v1
       with:
-        tag_name: release
-        name: release
-        body: "A new release"
+        tag_name: latest
+        name: latest
+        body: "Latest Release"
         files: bin/*
         draft: false
 
