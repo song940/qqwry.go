@@ -24,7 +24,9 @@ jobs:
     - name: Upload Release
       uses: softprops/action-gh-release@v1
       with:
-        tag: ${{ github.ref }}
+        name: release
+        tag_name: ${{ steps.tag.outputs.release_tag }}
+        body: "A new release"
         files: bin/*
         draft: false
         generate_release_notes: true
