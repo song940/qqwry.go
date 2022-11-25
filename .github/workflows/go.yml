@@ -27,6 +27,7 @@ jobs:
         name: release
         body: "A new release"
         generate_release_notes: true
+        tag: ${{ github.ref }}
         tag_name: ${{ steps.tag.outputs.release_tag }}
         files: bin/*
         draft: false
