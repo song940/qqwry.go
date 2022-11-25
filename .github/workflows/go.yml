@@ -25,5 +25,5 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         files: bin/*
-        draft: true
+        draft: false
 
