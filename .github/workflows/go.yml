@@ -24,11 +24,9 @@ jobs:
     - name: Upload Release
       uses: softprops/action-gh-release@v1
       with:
+        tag_name: release
         name: release
         body: "A new release"
-        generate_release_notes: true
-        tag: "b"
-        tag_name: "a"
         files: bin/*
         draft: false
 
