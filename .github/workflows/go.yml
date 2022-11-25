@@ -25,9 +25,9 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         name: release
-        tag_name: ${{ steps.tag.outputs.release_tag }}
         body: "A new release"
+        generate_release_notes: true
+        tag_name: ${{ steps.tag.outputs.release_tag }}
         files: bin/*
         draft: false
-        generate_release_notes: true
 
